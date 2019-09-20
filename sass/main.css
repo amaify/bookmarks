@@ -106,7 +106,7 @@ body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-family: "Rubik", sans-serif;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .main-nav__links:hover {
@@ -366,7 +366,7 @@ body {
 .header__description--text {
   color: #a191a1;
   margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 31.25rem) {
@@ -887,6 +887,7 @@ body {
   margin-bottom: 1.5rem;
   line-height: 1.5rem;
   text-align: left;
+  font-weight: 300;
 }
 
 .extensions {
@@ -1276,6 +1277,7 @@ body {
   width: 80%;
   color: #252b46;
   font-size: 0.7rem;
+  font-weight: 300;
   text-align: left;
   margin: 0.7rem auto 0.7rem auto;
 }
@@ -1303,7 +1305,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.9rem;
   color: #a191a1;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 31.25rem) {
@@ -1407,6 +1409,7 @@ body {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 31.25rem) {
@@ -1441,6 +1444,7 @@ body {
   color: #fff;
   font-size: 1.3rem;
   width: 80%;
+  font-weight: 300;
   margin: 0 auto;
   padding: 0 0 2rem 0;
 }
