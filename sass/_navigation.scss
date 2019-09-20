@@ -1,0 +1,207 @@
+.main-nav{
+    padding: 2rem 1rem 2rem 1rem;
+    display: flex;
+    align-content: center;
+
+    @include responsive__mode(tablet-portrait){
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    @include responsive__mode(tablet){
+        padding: 2rem 3rem 4rem 3rem;
+    }
+
+    @include responsive__mode(tablet-landscape){
+        padding: 2rem 2rem 4rem 2rem;
+
+        .hamburger__menu{
+            display: none;
+        }
+    }
+
+    @include responsive__mode(desktop){
+        padding: 2rem 6rem 4rem 6rem;
+
+        .hamburger__menu{
+            display: none;
+        }
+    }
+
+
+    &__brand{
+        margin-right: auto;
+    }
+
+    &__items{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: none;
+
+        @include responsive__mode(tablet-portrait){
+            display: none;
+        }
+
+        @include responsive__mode(tablet){
+            display: none;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            display: block;
+        }
+    }
+
+    &__item{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1rem;
+    }
+
+    &__links{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.7rem;
+        color: $dark-blue;
+        transition: all 0.3s;
+        font-family: $primary-font;
+        font-weight: 500;
+
+        &:hover{
+            color: $soft-red;
+        }
+
+        &--cta{
+            background: $soft-red;
+            color: #fff;
+            padding: 0.5rem 0.9rem;
+            border-radius: 4px;
+            border: 1px solid $soft-red;
+
+            &:hover{
+                background: transparent;
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+.nav__active{
+    color: $soft-red;
+}
+
+.nav__cta{
+    border: 1px solid $soft-red;
+    background: transparent;
+    color: $dark-blue;
+}
+
+@include responsive__mode(tablet-portrait){
+    .mobile__nav{
+        display: none;
+    }
+}
+
+.mobile__nav{
+    display: block;
+    background: rgba($dark-blue, 0.9);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 2rem 1rem 2rem 1rem;
+    transform: translateX(100%);
+    transition: all 0.3s;
+    z-index: 1;
+
+    @include responsive__mode(tablet-portrait){
+        width: 40%;
+    }
+
+    @include responsive__mode(tablet){
+        width: 30%;
+    }
+
+    &--nav{
+        display: flex;
+    }
+
+    &--brand{
+        text-decoration: none;
+        margin-right: auto;
+    }
+
+    &--close{
+        text-decoration: none;
+        align-self: center;
+    }
+
+    &--items{
+        margin: 0;
+        padding: 2.5rem 0 2rem 0;
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &--item:not(:last-child){
+        text-transform: uppercase;
+        padding: 0.7rem 0 0.7rem 0;
+        border-top: 1px solid $faint-blue;
+        width: 100%;
+        text-align: center;
+        font-family: $primary-font;
+        font-weight: 500;
+
+        & a{
+            text-decoration: none;
+            color: $dark-grey;
+        }
+    }
+
+    &--item:nth-child(3){
+        border-bottom: 1px solid $faint-blue;
+    }
+
+    &--login{
+        text-transform: uppercase;      
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+        border: 2px solid $dark-grey;
+        border-radius: 4px;
+        margin-top: 0.9rem;
+        font-family: $primary-font;
+        font-weight: 500;
+
+        & a{
+            color: $dark-grey;
+            text-decoration: none;
+        }
+    }
+
+    &--icons{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &--icon{
+        text-decoration: none;
+
+        &-logo{
+            width: 22px;
+            height: 22px;
+            fill: $dark-grey;
+            transition: all 0.3s;
+            margin: 0 0.8rem;
+        }
+    }
+}
+
+.hamburger__menu{
+    cursor: pointer;
+}

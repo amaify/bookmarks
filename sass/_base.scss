@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+$primary-font: 'Rubik', sans-serif;
+
+//Variables
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+$dark-red: hsl(0, 84%, 51%);
+
+//Neutral Colors
+$grey-blue: hsl(299, 8%, 60%);
+$dark-blue: hsl(229, 31%, 21%);
+$faint-blue: hsl(221, 9%, 35%);
+$dark-grey: rgb(245, 240, 240);
+
+@mixin responsive__mode($breakpoint) {
+    @if($breakpoint == tablet-portrait){
+        @media only screen and (min-width: 31.25rem){@content}
+    };
+
+    @if($breakpoint == tablet){
+        @media only screen and (min-width: 40.625rem){@content}
+    };
+
+    @if($breakpoint == tablet-landscape){
+        @media only screen and (min-width: 50rem){@content}
+    };
+
+    @if($breakpoint == desktop){
+        @media only screen and (min-width: 75rem){@content}
+    };
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 112.5%;
+    font-family: $primary-font;
+}
+
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.showFeatures{
+    display: block;
+}

@@ -1,0 +1,383 @@
+.footer{
+    margin-top: 8rem;
+    background: $soft-blue;
+    
+    &__cta{
+        text-align: center;
+        padding-bottom: 2.5rem;
+
+        &--heading{
+            padding: 3rem 0 0.7rem 0;
+            color: #fff;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+
+            @include responsive__mode(tablet-portrait){
+                padding: 3rem 0 1rem 0;
+                font-size: 0.6rem;
+            }
+
+            @include responsive__mode(tablet){
+                font-size: 0.6rem;
+                padding: 3rem 0 1rem 0;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                font-size: 0.7rem;
+                padding: 3rem 0 1rem 0;
+            }
+
+            @include responsive__mode(desktop){
+                font-size: 0.8rem;
+                padding: 3rem 0 1.5rem 0;
+            }
+        }
+
+        &--description{
+            color: #fff;
+            font-size: 1.3rem;
+            width: 80%;
+            margin: 0 auto;
+            padding: 0 0 2rem 0;
+
+            @include responsive__mode(tablet-portrait){
+                font-size: 1rem;
+                width: 65%;
+            }
+
+            @include responsive__mode(tablet){
+                font-size: 1rem;
+                width: 60%;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                font-size: 1.3rem;
+                width: 80%;
+            }
+
+            @include responsive__mode(desktop){
+                font-size: 1.8rem;
+                width: 30%;
+            }
+        }
+    }
+
+    &__form{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+
+        @include responsive__mode(tablet-portrait){
+            width: 85%;
+            flex-direction: row;
+            flex-basis: 100%;
+        }
+
+        @include responsive__mode(tablet){
+            width: 80%;
+            flex-direction: row;
+            flex-basis: 100%;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            width: 70%;
+        }
+
+        @include responsive__mode(desktop){
+            width: 40%;
+        }
+
+        &--alert{
+            text-align: left;
+            background: $soft-red;
+            width: 100%;
+            margin: 0 auto;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 0.5rem;
+            font-style: italic;
+            color: $dark-grey;
+            font-size: 0.7rem;
+            display: none;
+
+            @include responsive__mode(tablet-portrait){
+                width: 85%;
+            }
+
+            &-icon{
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                fill: $soft-red;
+                display: none;
+
+                @include responsive__mode(tablet-portrait){
+                    top: 10px;
+                    right: 45px;
+                }
+            }
+        }
+
+        &--email{
+            flex-basis: 100%;
+            position: relative;
+
+            @include responsive__mode(tablet-portrait){
+                flex-basis: 70%;
+            }
+
+            &-email{
+                margin-right: auto;
+                padding: 0.8rem 1rem;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                width: 100%;
+
+                @include responsive__mode(tablet-portrait){
+                    width: 85%;
+                }
+
+                &::placeholder{
+                    color: $grey-blue;
+                }
+            }
+        }
+
+        &--submit{
+            flex-basis: 100%;
+
+            @include responsive__mode(tablet-portrait){
+                flex-basis: 20%;
+            }
+
+            @include responsive__mode(tablet){
+                flex-basis: 20%;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                flex-basis: 20%;
+            }
+
+            @include responsive__mode(desktop){
+                flex-basis: 25%;
+            }
+
+            & input{
+                padding: 0.8rem 1rem;
+                border-radius: 5px;
+                border: 1px solid $soft-red;
+                outline: none;
+                background: $soft-red;
+                color: #fff;
+                font-size: 0.8rem;
+                cursor: pointer;
+                width: 100%;
+                margin-top: 0.8rem;
+                transition: all 0.3s;
+
+                @include responsive__mode(tablet-portrait){
+                    margin-top: 0;
+                }
+
+                &:hover{
+                    background: #fff;
+                    color: $soft-red;
+                }
+            }
+        }
+    }
+
+    &__nav{
+        background: $dark-blue;
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+
+        @include responsive__mode(tablet-portrait){
+            padding: 1.5rem 2rem 0.5rem 2rem;
+        }
+
+        @include responsive__mode(tablet){
+            padding: 1.5rem 3rem 0.5rem 3rem;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            padding: 1.5rem 2rem 0.5rem 2rem;
+        }
+
+        @include responsive__mode(desktop){
+            padding: 1.5rem 6rem 0.5rem 6rem;
+        }
+
+        &--items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include responsive__mode(tablet-portrait){
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        &--item{
+            display: flex;
+            flex-direction: column;
+            margin-right: 0;
+
+            @include responsive__mode(tablet-portrait){
+                flex-direction: row;
+                margin-right: auto;
+            }
+
+            &-brand{
+                margin-right: 0;
+
+                @include responsive__mode(tablet-portrait){
+                    margin-right: 1rem;  
+                }
+
+                @include responsive__mode(tablet){
+                    margin-right: 1rem;
+                }
+
+                @include responsive__mode(tablet-landscape){
+                    margin-right: 3rem;
+                }
+            }
+
+            &-links{
+                list-style: none;
+                align-items: center;
+            }
+
+            &-link{
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                margin: 1rem 0;
+                transition: all 0.3s;
+                display: block;
+                text-align: center;
+
+                & a{
+                    text-decoration: none;
+                    color: $dark-grey;
+                }
+
+                @include responsive__mode(tablet-portrait){
+                    margin: 0 0.3rem;
+                    font-size: 0.6rem;
+                    display: inline-block;
+                    text-align: left;
+                }
+
+                @include responsive__mode(tablet){
+                    margin: 0 0.5rem;
+                    font-size: 0.7rem;
+                }
+
+                @include responsive__mode(tablet-landscape){
+                    margin: 0 1rem;
+                    font-size: 0.7rem;
+                }
+
+                @include responsive__mode(desktop){
+                    margin: 0 1.5rem;
+                    font-size: 0.8rem;
+                }
+
+                &:hover,
+                &:active{
+                    color: $soft-red;
+                }
+            }
+        }
+
+        &--icons{
+            margin-top: 1rem;
+
+            @include responsive__mode(tablet-portrait){
+                margin-top: 0;
+            }
+        }
+
+        &--icon{
+            text-decoration: none;
+            margin: 0 0.7rem;
+
+            @include responsive__mode(tablet-portrait){
+                margin: 0 0.8rem;
+            }
+
+            @include responsive__mode(tablet){
+                margin: 0 0.8rem;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                margin: 0 1rem;
+            }
+
+            &-logo{
+                width: 22px;
+                height: 22px;
+                fill: $dark-grey;
+                transition: all 0.3s;
+
+                @include responsive__mode(tablet-portrait){
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @include responsive__mode(tablet){
+                    width: 20px;
+                    height: 20px;
+                }
+
+                @include responsive__mode(tablet-landscape){
+                    width: 22px;
+                    height: 22px;
+                }
+
+                &:hover,
+                &:active{
+                    fill: $soft-red;
+                }
+            }
+        }
+    }
+}
+
+.attribution{
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+
+    @include responsive__mode(tablet-portrait){
+        margin-top: 0.5rem;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    & a{
+        color: $dark-grey;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover{
+            color: $soft-red;
+        }
+    }
+}
+
+.is-invalid{
+    display: block;
+}
+
+.is-invalid2{
+    border: 2px solid $soft-red;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

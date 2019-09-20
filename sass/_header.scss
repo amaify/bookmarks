@@ -1,0 +1,195 @@
+.header{
+    padding: 0 1rem 8rem 1rem;
+    overflow: hidden;
+    font-family: $primary-font;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include responsive__mode(tablet-portrait){
+        padding: 0 2rem 5rem 2rem;
+        display: inline-block;
+    }
+
+    @include responsive__mode(tablet){
+        padding: 0 3rem 4rem 3rem;
+    }
+
+    @include responsive__mode(tablet-landscape){
+        padding: 0 2rem 4rem 2rem;
+    }
+
+    @include responsive__mode(desktop){
+        padding: 0 6rem 5rem 6rem;
+    }
+
+
+    &__description{
+        width: 100%;
+        text-align: center;
+
+        @include responsive__mode(tablet-portrait){
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            width: 50%;
+            margin-right: 1rem;
+        }
+
+        @include responsive__mode(tablet){
+            width: 45%;
+            margin-right: 2rem;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            width: 35%;
+            margin-right: 2rem;
+        }
+
+        &--heading{
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: $dark-blue;
+            font-weight: 500;
+
+            @include responsive__mode(tablet-portrait){
+                font-size: 1rem;
+            }
+
+            @include responsive__mode(tablet){
+                font-size: 1.2rem;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                font-size: 1.3rem;
+            }
+
+            @include responsive__mode(desktop){
+                font-size: 1.9rem;
+            }
+        }
+
+        &--text{
+            color: $grey-blue;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            
+            @include responsive__mode(tablet-portrait){
+                font-size: 0.8rem;
+            }
+
+            @include responsive__mode(tablet){
+                font-size: 0.9rem;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                font-size: 1rem;
+            }
+
+            @include responsive__mode(desktop){
+                font-size: 1.2rem;
+            }
+        }
+
+        &--link{
+            text-decoration: none;
+            background: $dark-grey;
+            border-radius: 4px;
+            padding: 0.4rem;
+            font-size: 0.8rem;
+            color: #333;
+            box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            font-weight: 400;
+
+            @include responsive__mode(tablet-portrait){
+                padding: 0.5rem;
+                font-size: 0.6rem;
+            }
+
+            @include responsive__mode(tablet){
+                padding: 0.4rem;
+                font-size: 0.7rem;
+            }
+
+            @include responsive__mode(desktop){
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+
+            &:not(:last-child){
+                margin-right: 0.5rem;
+            }
+
+            &-1{
+                border: 1px solid $soft-blue;
+                background: $soft-blue;
+                color: #fff;
+
+                &:hover{
+                    background: transparent;
+                    color: $soft-blue;
+                }
+            }
+
+            &-2{
+                background: $dark-grey;
+                color: $dark-blue;
+
+                &:hover{
+                    background: transparent;
+                    border: 1px solid $dark-blue;
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+
+    &__image{
+        width: 100%;
+        position: relative;
+        margin-bottom: 3.5rem;
+
+        @include responsive__mode(tablet-portrait){
+            display: inline-block;
+            vertical-align: middle;
+            width: 40%;
+            position: relative;
+        }
+
+        @include responsive__mode(tablet){
+            width: 45%;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            width: 55%;
+        }
+
+        &--img{
+            width: 100%;
+        }
+
+        &::after{
+            content: '';
+            display: inline-block;
+            background: $soft-blue;
+            width: 80%;
+            height: 40%;
+            position: absolute;
+            top: 40%;
+            right: -35%;
+            transform: scale(1.8);
+            border-radius: 50px;
+            z-index: -1;
+
+            @include responsive__mode(tablet-portrait){
+                content: '';
+                width: 80%;
+                height: 25%;
+                top: 47%;
+                right: -80%;
+                transform: scale(3);
+            }
+        }
+    }
+}
