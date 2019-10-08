@@ -586,12 +586,31 @@ body {
 
 .features__nav--link {
   text-decoration: none;
-  color: #a191a1;
   display: block;
   padding: 0.6rem 0 0 0;
   text-align: center;
   cursor: pointer;
   border-top: 1px solid #f5f0f0;
+}
+
+.features__nav--link .btns {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #a191a1;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 31.25rem) {
+  .features__nav--link .btns {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 40.625rem) {
+  .features__nav--link .btns {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 31.25rem) {
@@ -641,8 +660,8 @@ body {
   }
 }
 
-.features__nav--link:hover a,
-.features__nav--link:active a {
+.features__nav--link:hover button,
+.features__nav--link:active button {
   color: #fa5757;
 }
 
@@ -1280,6 +1299,26 @@ body {
   font-weight: 300;
   text-align: left;
   margin: 0.7rem auto 0.7rem auto;
+}
+
+.faq__question--text button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #252b46;
+  font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 31.25rem) {
+  .faq__question--text button {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 40.625rem) {
+  .faq__question--text button {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (min-width: 31.25rem) {
@@ -2037,7 +2076,7 @@ body {
   color: #5368df;
 }
 
-.active {
+.active .btns {
   color: #252b46;
 }
 
